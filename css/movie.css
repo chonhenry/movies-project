@@ -1,0 +1,270 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: black;
+  font-family: "PT Sans", sans-serif;
+  color: white;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+#navbar {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#topbar-list,
+#menu-list {
+  display: flex;
+  list-style: none;
+}
+
+#topbar {
+  width: 100vw;
+}
+
+#topbar-container {
+  margin: auto;
+  display: flex;
+  height: 87px;
+  width: 980px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#topbar-container img {
+  width: 200px;
+  height: auto;
+}
+
+.topbar-list-item {
+  display: flex;
+  /* border: orange 1px solid; */
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  margin: 5px;
+}
+
+#topbar-list li #location {
+  width: 210px;
+}
+
+#topbar-list li #login {
+  width: 85px;
+}
+
+#topbar-list li #join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+}
+
+#topbar-list li #search-box {
+  position: relative;
+}
+
+#topbar-list li #search-box input {
+  height: 34px;
+  width: 150px;
+  padding: 10px;
+  color: white;
+  background-color: #323232;
+  border: none;
+  border-radius: 5px;
+}
+
+#topbar-list li #search-box input::placeholder {
+  color: white;
+  font-size: 11px;
+}
+
+#topbar-list li #search-box .fas {
+  position: absolute;
+  right: 15px;
+  background-color: #323232;
+}
+
+#menu {
+  background-color: #f56600;
+  height: 45px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-list,
+#menu-list li {
+  background-color: #f56600;
+}
+
+.menu-list-item {
+  background-color: #f56600;
+  display: flex;
+  height: 45px;
+  width: 95px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-right: #f88648 2px solid;
+}
+
+.menu-list-item a {
+  background-color: #f56600;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-list-item img {
+  width: 100%;
+  height: auto;
+  background-color: #f56600;
+}
+
+.long {
+  width: 110px;
+}
+
+.longest {
+  width: 151px;
+}
+
+#menu-list li:last-child .menu-list-item {
+  border: none;
+}
+
+/* ************************************************************************************ */
+
+/* ************************************************************************************ */
+#promo {
+  width: 980px;
+  padding: 30px 0;
+  margin: auto;
+  font-size: 20px;
+}
+
+#promo p {
+  display: inline;
+  padding: 15px 0;
+  border-bottom: #f88648 2px solid;
+}
+
+/* ************************************************************************************ */
+#promotions {
+  width: 100%;
+  height: 350px;
+}
+
+#promotions-container {
+  width: 980px;
+  height: 100%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo-col {
+  width: 33.33%;
+}
+
+#promo-left {
+  display: flex;
+  align-items: center;
+}
+
+#promo-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#promo-middle img:first-child {
+  margin-bottom: 15px;
+}
+
+#promo-left img,
+#promo-middle img {
+  border-radius: 5px;
+}
+
+#promo-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+#promo-right .promo-right-item {
+  border-top: #191919 0.5px solid;
+  padding: 7px 0;
+}
+
+#promo-right .promo-right-item:last-child {
+  border-bottom: #191919 0.5px solid;
+}
+
+#promo-right .promo-right-item .title {
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+#promo-right .promo-right-item .info {
+  font-size: 13px;
+}
+
+/* ************************************************************************************ */
+footer {
+  border-top: #191919 2px solid;
+  height: 260px;
+}
+
+footer .footer-link {
+  width: 980px;
+  height: 100%;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+}
+
+footer .footer-col {
+  width: 25%;
+}
+
+footer .footer-col .footer-title {
+  margin-bottom: 10px;
+}
+
+footer .footer-col .footer-item {
+  font-size: 14px;
+  color: #b2b2b2;
+}
+
+footer .footer-col a {
+  display: block;
+  font-size: 14px;
+  color: #b2b2b2;
+}
+
+footer .footer-col a:nth-child(4) {
+  margin-bottom: 10px;
+}
