@@ -360,4 +360,36 @@ a:visited {
 /* ************************************************************************************ */
 footer {
   border-top: #191919 2px solid;
+  height: 260px;
+}
+
+footer .footer-link {
+  width: 980px;
+  height: 100%;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+}
+
+footer .footer-col {
+  width: 25%;
+}
+
+footer .footer-col .footer-title {
+  margin-bottom: 10px;
+}
+
+footer .footer-col .footer-item {
+  font-size: 14px;
+  color: #b2b2b2;
+}
+
+footer .footer-col a {
+  display: block;
+  font-size: 14px;
+  color: #b2b2b2;
+}
+
+footer .footer-col a:nth-child(4) {
+  margin-bottom: 10px;
 }
