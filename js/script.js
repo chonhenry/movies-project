@@ -31,10 +31,27 @@ document.getElementById("btn-right").addEventListener("click", () => {
 let movie = document.querySelectorAll(".movie-title");
 
 movie.forEach(element => {
-  console.log(element);
+  // console.log(element);
   element.addEventListener("click", () => {
-    console.log(element.innerText);
+    // console.log(element.innerText);
     window.open("./movie.html" + `?title=${element.innerText}`);
     // newWindow.temp = "scoob!";
   });
 });
+
+// Search Bar
+let search_logo = document.getElementById("search-logo");
+let search_value = document.getElementById("search-input");
+
+search_logo.addEventListener("click", () => {
+  console.log(search_value.value);
+  window.open("./search_result.html" + `?title=${search_value.value}`);
+});
+
+// fetch(`http://www.omdbapi.com/?apikey=cbfe887d&s=` + "scoob!")
+//   .then(response => {
+//     return response.json();
+//   })
+//   .then(data => {
+//     console.log(data);
+//   });

@@ -207,6 +207,10 @@ a:visited {
   padding: 10px 0;
 }
 
+.movie-details:last-child {
+  border: none;
+}
+
 #movie-details #date-time {
   display: flex;
   margin: 15px 0;
