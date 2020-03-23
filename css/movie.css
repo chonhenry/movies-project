@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background: black;
+  background: #111111;
   font-family: "PT Sans", sans-serif;
   color: white;
 }
@@ -154,6 +154,72 @@ a:visited {
 }
 
 /* ************************************************************************************ */
+#movie-section {
+  width: 100%;
+  height: 700px;
+  background: red;
+}
+
+#movie-section #row {
+  width: 980px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+#movie-title {
+  width: 980px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+#movie-title #title {
+  font-size: 42px;
+}
+
+#movie-title #book {
+  width: 168px;
+  height: 56px;
+  background-color: #f56600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+#movie-info {
+  width: 980px;
+  height: 560px;
+  margin: auto;
+  display: flex;
+}
+
+#movie-info #movie-details {
+  width: 68%;
+  padding-right: 5px;
+}
+
+#movie-info #movie-poster {
+  width: 33%;
+  height: 450px;
+  margin-top: 40px;
+  background-color: blue;
+}
+
+#movie-details #date-time {
+  display: flex;
+  margin: 15px 0;
+}
+
+#movie-details #date-time #date {
+  width: 50%;
+}
+
+.deatils-margin {
+  margin: 15px 0;
+}
 
 /* ************************************************************************************ */
 #promo {
