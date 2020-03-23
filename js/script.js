@@ -1,11 +1,6 @@
 // let movie = document.getElementsByClassName("poster")[0];
 
-// movie.addEventListener("click", () => {
-//   console.log("clicked");
-//   let newWindow = window.open("./movie.html" + "?title=scoob!");
-//   newWindow.temp = "scoob!";
-// });
-
+// move slider
 document.getElementById("btn-left").addEventListener("click", () => {
   let slider1 = document.getElementById("movie-slider-1");
   let slider2 = document.getElementById("movie-slider-2");
@@ -30,4 +25,16 @@ document.getElementById("btn-right").addEventListener("click", () => {
     slider2.classList.add("middle");
     slider2.classList.remove("moved-right");
   }
+});
+
+// add click event listner to each movie
+let movie = document.querySelectorAll(".movie-title");
+
+movie.forEach(element => {
+  console.log(element);
+  element.addEventListener("click", () => {
+    console.log(element.innerText);
+    window.open("./movie.html" + `?title=${element.innerText}`);
+    // newWindow.temp = "scoob!";
+  });
 });

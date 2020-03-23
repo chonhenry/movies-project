@@ -217,8 +217,21 @@ a:visited {
   width: 50%;
 }
 
-.deatils-margin {
+#movie-details #intro {
+  margin-bottom: 25px;
+}
+
+.movie-details {
   margin: 15px 0;
+  display: flex;
+}
+
+.movie-details p:first-child {
+  width: 150px;
+}
+
+.movie-details p:last-child {
+  width: 500px;
 }
 
 /* ************************************************************************************ */
