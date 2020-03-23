@@ -2,12 +2,9 @@
 
 const params = new URLSearchParams(window.location.search);
 
-console.log(`Title: ${params.get("title")}`);
-
-const title = params.get("title").replace("%", " ");
-let genre, cast, director, production, age;
-
 // DOM object
+let big_title = document.getElementById("title");
+let span_title = document.getElementById("span-title");
 let movie_details_title = document.getElementById("movie-details-title");
 let movie_details_genre = document.getElementById("movie-details-genre");
 let movie_details_cast = document.getElementById("movie-details-cast");
@@ -16,26 +13,30 @@ let movie_details_production = document.getElementById(
   "movie-details-production"
 );
 let movie_details_age = document.getElementById("movie-details-age");
+let release_date = document.getElementById("release-date");
+let running_time = document.getElementById("running-time");
+let movie_intro = document.getElementById("intro");
+let movie_poster = document.getElementById("movie-poster-img");
 
-fetch(`http://www.omdbapi.com/?apikey=cbfe887d&t=` + title)
+fetch(`http://www.omdbapi.com/?apikey=cbfe887d&t=` + params.get("title"))
   .then(response => {
     return response.json();
   })
   .then(data => {
     console.log(data);
 
-    genre = data["Genre"];
-    cast = data["Actors"];
-    director = data["Director"];
-    production = data["Production"];
-    age = data["Rated"];
-
-    movie_details_title.innerText = title;
-    movie_details_genre.innerText = genre;
-    movie_details_cast.innerText = cast;
-    movie_details_director.innerText = director;
-    movie_details_production.innerText = production;
-    movie_details_age.innerText = age;
+    big_title.innerText = params.get("title");
+    span_title.innerText = params.get("title");
+    movie_details_title.innerText = params.get("title");
+    movie_details_genre.innerText = data["Genre"];
+    movie_details_cast.innerText = data["Actors"];
+    movie_details_director.innerText = data["Director"];
+    movie_details_production.innerText = data["Production"];
+    movie_details_age.innerText = data["Rated"];
+    release_date.innerText = data["Released"];
+    running_time.innerText = data["Runtime"];
+    movie_intro.innerText = data["Plot"];
+    movie_poster.src = data["Poster"];
   });
 
 // Title: "Wonder Woman 1984";
