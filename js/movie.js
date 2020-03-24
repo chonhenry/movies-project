@@ -40,6 +40,20 @@ fetch(`http://www.omdbapi.com/?apikey=cbfe887d&i=` + params.get("id"))
     movie_poster.src = data["Poster"];
   });
 
+// Search Bar
+let search_logo = document.getElementById("search-logo");
+let search_value = document.getElementById("search-input");
+
+search_logo.addEventListener("click", () => {
+  console.log(search_value.value);
+  window.open("./search_result.html" + `?title=${search_value.value}`);
+});
+
+search_value.addEventListener("keypress", e => {
+  if (e.keyCode === 13) {
+    window.open("./search_result.html" + `?title=${search_value.value}`);
+  }
+});
 // Title: "Wonder Woman 1984";
 // Rated: "N/A";
 // Released: "05 Jun 2020";

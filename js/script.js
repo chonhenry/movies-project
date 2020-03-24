@@ -46,3 +46,9 @@ search_logo.addEventListener("click", () => {
   console.log(search_value.value);
   window.open("./search_result.html" + `?title=${search_value.value}`);
 });
+
+search_value.addEventListener("keypress", e => {
+  if (e.keyCode === 13) {
+    window.open("./search_result.html" + `?title=${search_value.value}`);
+  }
+});

@@ -51,3 +51,18 @@ fetch(`http://www.omdbapi.com/?apikey=cbfe887d&s=` + params.get("title"))
       }
     }
   });
+
+// Search Bar
+let search_logo = document.getElementById("search-logo");
+let search_value = document.getElementById("search-input");
+
+search_logo.addEventListener("click", () => {
+  console.log(search_value.value);
+  window.open("./search_result.html" + `?title=${search_value.value}`);
+});
+
+search_value.addEventListener("keypress", e => {
+  if (e.keyCode === 13) {
+    window.open("./search_result.html" + `?title=${search_value.value}`);
+  }
+});
