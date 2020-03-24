@@ -19,16 +19,16 @@ let movie_intro = document.getElementById("intro");
 let movie_poster = document.getElementById("movie-poster-img");
 
 // fetch the movie api
-fetch(`http://www.omdbapi.com/?apikey=cbfe887d&t=` + params.get("title"))
+fetch(`http://www.omdbapi.com/?apikey=cbfe887d&i=` + params.get("id"))
   .then(response => {
     return response.json();
   })
   .then(data => {
     console.log(data);
 
-    big_title.innerText = params.get("title");
-    span_title.innerText = params.get("title");
-    movie_details_title.innerText = params.get("title");
+    big_title.innerText = data["Title"];
+    span_title.innerText = data["Title"];
+    movie_details_title.innerText = data["Title"];
     movie_details_genre.innerText = data["Genre"];
     movie_details_cast.innerText = data["Actors"];
     movie_details_director.innerText = data["Director"];

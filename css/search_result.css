@@ -180,37 +180,38 @@ a:visited {
   width: 980px;
   margin: auto;
 }
-
-#search-item {
+/* ==================================================== */
+.search-item {
   width: 980px;
   margin: 30px auto;
   display: flex;
 }
 
-#search-item #poster {
+.search-item .poster {
   width: 160px;
   height: auto;
   margin-right: 30px;
 }
 
-#search-info-title {
+.search-info-title {
   margin-bottom: 15px;
 }
 
-#search-release-date,
-#search-intro {
+.search-release-date {
   display: flex;
   margin: 15px 0;
 }
 
-#search-release-date h4,
-#search-intro h4 {
+.search-release-date h4 {
   width: 200px;
 }
 
-#search-release-date p,
-#search-intro p {
+.search-release-date p {
   width: 550px;
+}
+
+.search-info .search-info-title:hover {
+  cursor: pointer;
 }
 
 /* ************************************************************************************ */
