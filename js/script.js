@@ -29,12 +29,20 @@ document.getElementById("btn-right").addEventListener("click", () => {
 
 // add click event listner to each movie
 let movie = document.querySelectorAll(".movie-title");
+let movie_poster = document.querySelectorAll(".movie-poster");
 
 movie.forEach(element => {
   element.addEventListener("click", () => {
     // console.log(element.innerText);
-    window.open("./movie.html" + `?id=${element.id}`);
+    window.open("./movie.html" + `?id=${element.classList[1]}`);
     // newWindow.temp = "scoob!";
+  });
+});
+
+movie_poster.forEach(element => {
+  element.addEventListener("click", () => {
+    // console.log(element.classList[1]);
+    window.open("./movie.html" + `?id=${element.classList[1]}`);
   });
 });
 
