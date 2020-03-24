@@ -277,6 +277,10 @@ a:visited {
   font-size: 18px;
 }
 
+.movie-container .movie-title:hover {
+  cursor: pointer;
+}
+
 /* ************************************************************************************ */
 #promo {
   width: 980px;
