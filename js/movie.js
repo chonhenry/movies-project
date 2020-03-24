@@ -18,6 +18,7 @@ let running_time = document.getElementById("running-time");
 let movie_intro = document.getElementById("intro");
 let movie_poster = document.getElementById("movie-poster-img");
 
+// fetch the movie api
 fetch(`http://www.omdbapi.com/?apikey=cbfe887d&t=` + params.get("title"))
   .then(response => {
     return response.json();
