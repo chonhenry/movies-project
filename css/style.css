@@ -204,10 +204,6 @@ a:visited {
   /* left: 100vw; */
 }
 
-#movie-slider-2 .movie-container {
-  /* background-color: green; */
-}
-
 .movie-slider.middle {
   transform: translateX(0);
 }
