@@ -43,9 +43,7 @@ fetch(`http://www.omdbapi.com/?apikey=cbfe887d&s=` + params.get("title"))
       let result_title = document.getElementsByClassName("search-info-title");
 
       for (let i = 0; i < result_title.length; i++) {
-        console.log(result_title[i].innerText);
         result_title[i].addEventListener("click", () => {
-          console.log(result_title[i].innerText);
           window.open("./movie.html" + `?id=${result_title[i].id}`);
         });
       }
